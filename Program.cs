@@ -3,7 +3,6 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using TraderSys.Portfolios.Models.Context;
 using TraderSys.Portfolios.Services;
-using TraderSys.Portfolios.Data;
 using TraderSys.Portfolios.Repositories;
 using TraderSys.Portfolios.Controllers;
 
@@ -12,6 +11,8 @@ internal class Program
     private static void Main(string[] args)
     {
         var builder = WebApplication.CreateBuilder(args);
+        var Configuration = builder.Configuration;
+        Configuration.AddEnvironmentVariables();
 
         builder.WebHost.ConfigureKestrel(options =>
         {
@@ -25,22 +26,22 @@ internal class Program
 
         // Add services to the container.
 
+        // Database
+        builder.Services.AddDbContextFactory<Context>(
+            options => options.UseNpgsql(Configuration.GetValue<string>("Postgres:ConnectionString")));
         builder.Services.AddGrpc();
         // builder.Services.AddGrpcHttpApi();
         builder.Services.AddRepository();
         builder.Services.AddServices();
         // builder.Services.AddAutoMapper(typeof(Mapper));
-        // Database
-        builder.Services.AddDbContextFactory<DataContext>(
-                    options => options.UseNpgsql("Server=127.0.0.1;Port=5432;Database=productsDb;User Id=admin;Password=admin1234"));
 
         var app = builder.Build();
 
         // Configure the HTTP request pipeline.
         app.MapGrpcService<GreeterService>();
-        app.UseEndpoints(endpoints => {
-            endpoints.MapGrpcService<ProductController>();
-        });
+        // app.UseEndpoints(endpoints => {
+        //     endpoints.MapGrpcService<ProductController>();
+        // });
 
         app.MapGet("/", () => "Communication with gRPC endpoints must be made through a gRPC client. To learn how to create a client, visit: https://go.microsoft.com/fwlink/?linkid=2086909");
 

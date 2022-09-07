@@ -4,14 +4,14 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
-using TraderSys.Portfolios.Data;
+using TraderSys.Portfolios.Models.Context;
 
 #nullable disable
 
 namespace TraderSys.Portfolios.Migrations
 {
-    [DbContext(typeof(DataContext))]
-    [Migration("20220906134341_InitialMigration")]
+    [DbContext(typeof(Context))]
+    [Migration("20220907063637_InitialMigration")]
     partial class InitialMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

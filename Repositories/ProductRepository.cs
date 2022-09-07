@@ -2,24 +2,24 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using TraderSys.Portfolios.Data;
+// using TraderSys.Portfolios.Data;
+using TraderSys.Portfolios.Models.Context;
 using TraderSys.Portfolios.Models.Entities;
 using Microsoft.EntityFrameworkCore;
 
 namespace TraderSys.Portfolios.Repositories
 {
     
-    public class ProductRepository : IProductRepository
+    public class ProductRepository : BaseRepository, IProductRepository
     {
-        private readonly IDataContext _context;
-        public ProductRepository(IDataContext context)
-        {
-            _context = context;
-        }
+        public ProductRepository(IDbContextFactory<Context> context) : base(context) { }
         public async Task<bool> Create(Product product)
         {        
-            _context.Products.Add(product);
-            await _context.SaveChangesAsync();
+            using (var context = base.Context.CreateDbContext())
+            {
+                await context.Products.AddAsync(product);
+                await context.SaveChangesAsync();
+            }
             return true;
         }
     }
