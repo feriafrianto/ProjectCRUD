@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "6OR+yEeMzMEXM9555562TG7xqqLd7OoPGxxOnG2TuqE1YRJtCfk+crKkiQcl/JhkVyguD3v8L4SPaDVKdihHmA==",
+  "dgSpecHash": "GeXRBujT8sbZ0EG/7Ds9IwtI0nxN2bBaIMMJQWQ4mHd1jNIJUfH9qOzPsUoEu/tYfir7jSRSqroytG6GWPf+Ng==",
   "success": true,
   "projectFilePath": "/Users/feriafrianto/Projects/TraderSys/TraderSys.Portfolios/TraderSys.Portfolios.csproj",
   "expectedPackageFiles": [
+    "/Users/feriafrianto/.nuget/packages/automapper/11.0.1/automapper.11.0.1.nupkg.sha512",
+    "/Users/feriafrianto/.nuget/packages/automapper.extensions.microsoft.dependencyinjection/11.0.0/automapper.extensions.microsoft.dependencyinjection.11.0.0.nupkg.sha512",
     "/Users/feriafrianto/.nuget/packages/google.protobuf/3.18.0/google.protobuf.3.18.0.nupkg.sha512",
     "/Users/feriafrianto/.nuget/packages/grpc.aspnetcore/2.40.0/grpc.aspnetcore.2.40.0.nupkg.sha512",
     "/Users/feriafrianto/.nuget/packages/grpc.aspnetcore.server/2.40.0/grpc.aspnetcore.server.2.40.0.nupkg.sha512",
@@ -14,6 +16,7 @@
     "/Users/feriafrianto/.nuget/packages/grpc.net.common/2.40.0/grpc.net.common.2.40.0.nupkg.sha512",
     "/Users/feriafrianto/.nuget/packages/grpc.tools/2.40.0/grpc.tools.2.40.0.nupkg.sha512",
     "/Users/feriafrianto/.nuget/packages/humanizer.core/2.8.26/humanizer.core.2.8.26.nupkg.sha512",
+    "/Users/feriafrianto/.nuget/packages/microsoft.csharp/4.7.0/microsoft.csharp.4.7.0.nupkg.sha512",
     "/Users/feriafrianto/.nuget/packages/microsoft.entityframeworkcore/6.0.8/microsoft.entityframeworkcore.6.0.8.nupkg.sha512",
     "/Users/feriafrianto/.nuget/packages/microsoft.entityframeworkcore.abstractions/6.0.8/microsoft.entityframeworkcore.abstractions.6.0.8.nupkg.sha512",
     "/Users/feriafrianto/.nuget/packages/microsoft.entityframeworkcore.analyzers/6.0.8/microsoft.entityframeworkcore.analyzers.6.0.8.nupkg.sha512",

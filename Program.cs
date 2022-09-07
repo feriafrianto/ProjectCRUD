@@ -3,32 +3,47 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using TraderSys.Portfolios.Models.Context;
 using TraderSys.Portfolios.Services;
+using TraderSys.Portfolios.Data;
+using TraderSys.Portfolios.Repositories;
+using TraderSys.Portfolios.Controllers;
 
-var builder = WebApplication.CreateBuilder(args);
-// Configurations
-var Configuration = builder.Configuration;
-Configuration.AddEnvironmentVariables();
-
-builder.WebHost.ConfigureKestrel(options =>
+internal class Program
 {
-    // Setup a HTTP/2 endpoint without TLS.
-    options.ListenLocalhost(7091, o => o.Protocols =
-        HttpProtocols.Http2);
-});
+    private static void Main(string[] args)
+    {
+        var builder = WebApplication.CreateBuilder(args);
 
-// Additional configuration is required to successfully run gRPC on macOS.
-// For instructions on how to configure Kestrel and gRPC clients on macOS, visit https://go.microsoft.com/fwlink/?linkid=2099682
+        builder.WebHost.ConfigureKestrel(options =>
+        {
+            // Setup a HTTP/2 endpoint without TLS.
+            options.ListenLocalhost(7091, o => o.Protocols =
+                HttpProtocols.Http2);
+        });
 
-// Add services to the container.
-builder.Services.AddGrpc();
+        // Additional configuration is required to successfully run gRPC on macOS.
+        // For instructions on how to configure Kestrel and gRPC clients on macOS, visit https://go.microsoft.com/fwlink/?linkid=2099682
 
-var app = builder.Build();
-// Database
-//builder.Services.AddDbContextFactory<ApplicationDbContext>(
-//    options => options.UseNpgsql("Server=localhost; Port=5432; Database=project; Username=postgres; Password=postgres"));
+        // Add services to the container.
 
-// Configure the HTTP request pipeline.
-app.MapGrpcService<GreeterService>();
-app.MapGet("/", () => "Communication with gRPC endpoints must be made through a gRPC client. To learn how to create a client, visit: https://go.microsoft.com/fwlink/?linkid=2086909");
+        builder.Services.AddGrpc();
+        // builder.Services.AddGrpcHttpApi();
+        builder.Services.AddRepository();
+        builder.Services.AddServices();
+        // builder.Services.AddAutoMapper(typeof(Mapper));
+        // Database
+        builder.Services.AddDbContextFactory<DataContext>(
+                    options => options.UseNpgsql("Server=127.0.0.1;Port=5432;Database=productsDb;User Id=admin;Password=admin1234"));
 
-app.Run();
+        var app = builder.Build();
+
+        // Configure the HTTP request pipeline.
+        app.MapGrpcService<GreeterService>();
+        app.UseEndpoints(endpoints => {
+            endpoints.MapGrpcService<ProductController>();
+        });
+
+        app.MapGet("/", () => "Communication with gRPC endpoints must be made through a gRPC client. To learn how to create a client, visit: https://go.microsoft.com/fwlink/?linkid=2086909");
+
+        app.Run();
+    }
+}

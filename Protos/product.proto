@@ -1,0 +1,41 @@
+syntax = "proto3";
+
+option csharp_namespace = "TraderSys.Portfolios";
+
+service ProductProto {
+    rpc Create (CreateProductRequest) returns (CreateProductResponse);
+}
+
+message CreateProductRequest {
+	string Id = 1;
+	string Name = 2;
+}
+
+message CreateProductResponse {
+	ResponseHeader header = 1;
+	ErrorMessages errors = 2;
+}
+message ResponseHeader {
+	bool success = 1;
+	string message = 2;
+	int32 status_code = 3;
+}
+
+// I think these error messages need to be refactored
+// ErrorMessage name seems too general. I prefer using
+// name like ValidationError and ValidationErrors. They
+// give much more context.
+// Refactor later because there's util that use this model.
+message ErrorMessage {
+	string field = 1;
+	string messages = 2;
+}
+
+message ErrorMessages {
+	repeated ErrorMessage error_list = 1;
+}
+message ProductResponse {
+	string id = 1;
+	string name = 2;
+	string code = 3;
+}

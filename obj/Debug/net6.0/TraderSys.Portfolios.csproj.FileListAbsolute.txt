@@ -5,6 +5,8 @@
 /Users/feriafrianto/Projects/TraderSys/TraderSys.Portfolios/bin/Debug/net6.0/TraderSys.Portfolios.runtimeconfig.json
 /Users/feriafrianto/Projects/TraderSys/TraderSys.Portfolios/bin/Debug/net6.0/TraderSys.Portfolios.dll
 /Users/feriafrianto/Projects/TraderSys/TraderSys.Portfolios/bin/Debug/net6.0/TraderSys.Portfolios.pdb
+/Users/feriafrianto/Projects/TraderSys/TraderSys.Portfolios/bin/Debug/net6.0/AutoMapper.dll
+/Users/feriafrianto/Projects/TraderSys/TraderSys.Portfolios/bin/Debug/net6.0/AutoMapper.Extensions.Microsoft.DependencyInjection.dll
 /Users/feriafrianto/Projects/TraderSys/TraderSys.Portfolios/bin/Debug/net6.0/Google.Protobuf.dll
 /Users/feriafrianto/Projects/TraderSys/TraderSys.Portfolios/bin/Debug/net6.0/Grpc.AspNetCore.Server.dll
 /Users/feriafrianto/Projects/TraderSys/TraderSys.Portfolios/bin/Debug/net6.0/Grpc.AspNetCore.Server.ClientFactory.dll
@@ -12,6 +14,14 @@
 /Users/feriafrianto/Projects/TraderSys/TraderSys.Portfolios/bin/Debug/net6.0/Grpc.Net.Client.dll
 /Users/feriafrianto/Projects/TraderSys/TraderSys.Portfolios/bin/Debug/net6.0/Grpc.Net.ClientFactory.dll
 /Users/feriafrianto/Projects/TraderSys/TraderSys.Portfolios/bin/Debug/net6.0/Grpc.Net.Common.dll
+/Users/feriafrianto/Projects/TraderSys/TraderSys.Portfolios/bin/Debug/net6.0/Humanizer.dll
+/Users/feriafrianto/Projects/TraderSys/TraderSys.Portfolios/bin/Debug/net6.0/Microsoft.EntityFrameworkCore.dll
+/Users/feriafrianto/Projects/TraderSys/TraderSys.Portfolios/bin/Debug/net6.0/Microsoft.EntityFrameworkCore.Abstractions.dll
+/Users/feriafrianto/Projects/TraderSys/TraderSys.Portfolios/bin/Debug/net6.0/Microsoft.EntityFrameworkCore.Design.dll
+/Users/feriafrianto/Projects/TraderSys/TraderSys.Portfolios/bin/Debug/net6.0/Microsoft.EntityFrameworkCore.Relational.dll
+/Users/feriafrianto/Projects/TraderSys/TraderSys.Portfolios/bin/Debug/net6.0/Microsoft.Extensions.Caching.Memory.dll
+/Users/feriafrianto/Projects/TraderSys/TraderSys.Portfolios/bin/Debug/net6.0/Npgsql.dll
+/Users/feriafrianto/Projects/TraderSys/TraderSys.Portfolios/bin/Debug/net6.0/Npgsql.EntityFrameworkCore.PostgreSQL.dll
 /Users/feriafrianto/Projects/TraderSys/TraderSys.Portfolios/obj/Debug/net6.0/TraderSys.Portfolios.csproj.AssemblyReference.cache
 /Users/feriafrianto/Projects/TraderSys/TraderSys.Portfolios/obj/Debug/net6.0/TraderSys.Portfolios.GeneratedMSBuildEditorConfig.editorconfig
 /Users/feriafrianto/Projects/TraderSys/TraderSys.Portfolios/obj/Debug/net6.0/TraderSys.Portfolios.AssemblyInfoInputs.cache
@@ -27,11 +37,3 @@
 /Users/feriafrianto/Projects/TraderSys/TraderSys.Portfolios/obj/Debug/net6.0/TraderSys.Portfolios.pdb
 /Users/feriafrianto/Projects/TraderSys/TraderSys.Portfolios/obj/Debug/net6.0/TraderSys.Portfolios.genruntimeconfig.cache
 /Users/feriafrianto/Projects/TraderSys/TraderSys.Portfolios/obj/Debug/net6.0/ref/TraderSys.Portfolios.dll
-/Users/feriafrianto/Projects/TraderSys/TraderSys.Portfolios/bin/Debug/net6.0/Microsoft.EntityFrameworkCore.dll
-/Users/feriafrianto/Projects/TraderSys/TraderSys.Portfolios/bin/Debug/net6.0/Microsoft.EntityFrameworkCore.Abstractions.dll
-/Users/feriafrianto/Projects/TraderSys/TraderSys.Portfolios/bin/Debug/net6.0/Microsoft.EntityFrameworkCore.Relational.dll
-/Users/feriafrianto/Projects/TraderSys/TraderSys.Portfolios/bin/Debug/net6.0/Microsoft.Extensions.Caching.Memory.dll
-/Users/feriafrianto/Projects/TraderSys/TraderSys.Portfolios/bin/Debug/net6.0/Npgsql.dll
-/Users/feriafrianto/Projects/TraderSys/TraderSys.Portfolios/bin/Debug/net6.0/Npgsql.EntityFrameworkCore.PostgreSQL.dll
-/Users/feriafrianto/Projects/TraderSys/TraderSys.Portfolios/bin/Debug/net6.0/Humanizer.dll
-/Users/feriafrianto/Projects/TraderSys/TraderSys.Portfolios/bin/Debug/net6.0/Microsoft.EntityFrameworkCore.Design.dll
